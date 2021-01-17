@@ -1,38 +1,11 @@
 # REACT-NATIVE
 
-### console.log() 
+### FlatList Element
 
-RUN IN TERMINAL
+**Turns an array into a list of elements**
 
-```
-$. react-native log-android
-```
+**We are required to pass in a `prop` of `data` the array of data that we are going to create a bunch of elements out of**
 
-### handleChange and handleSubmit
+**Also required to pass in `renderItem` prop - function that will turn each individual item into an element**
 
-```
-const [enteredGoal, setEnteredGoal] = useState('');
-
-  const handleChange = inputText => {
-    setEnteredGoal(inputText);
-  };
-
-  const handleSubmit = () => {
-    console.log(enteredGoal);
-  };
-
-  return (
-    <View style={styles.screen}>
-      <View style={styles.header}>
-        <TextInput
-          placeholder="Add Goals"
-          style={styles.input}
-          onChangeText={handleChange}
-          value={enteredGoal}
-        />
-        <Button title="ADD" onPress={handleSubmit} />
-      </View>
-    </View>
-  );
-};
-```
+**If you are coming from React on the web, you might be used to `mapping` an array of data to build a list = - FlatList is better with RN**
